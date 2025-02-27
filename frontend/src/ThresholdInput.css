@@ -1,10 +1,10 @@
-/* Container spacing to prevent touching the header */
+/* Center the component */
 .threshold-container {
-    margin-top: 20px; /* Adds space below the header */
-    padding: 16px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;  /* Centers vertically */
+    width: 100%;  /* Ensure it spans the full width */
+    padding: 20px; /* Add some spacing */
 }
 
 /* Form Layout */
