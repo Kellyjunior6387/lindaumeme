@@ -1,0 +1,81 @@
+/* Container spacing to prevent touching the header */
+.threshold-container {
+    margin-top: 20px; /* Adds space below the header */
+    padding: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Form Layout */
+.threshold-form {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Spacing between elements */
+}
+
+/* Label Styling */
+.threshold-label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Bigger, Readable Input */
+.threshold-input {
+    width: 140px; /* Increased width */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+/* Highlight input on focus */
+.threshold-input:focus {
+    outline: none;
+    border-color: #d32f2f;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+}
+
+/* Eye-Catching Button */
+.threshold-button {
+    padding: 10px 18px;
+    background: linear-gradient(45deg, #d32f2f, #ff5252);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+/* Button Hover & Click Effects */
+.threshold-button:hover {
+    background: linear-gradient(45deg, #b71c1c, #ff1744);
+    transform: scale(1.05);
+}
+
+.threshold-button:active {
+    transform: scale(0.95);
+}
+
+/* Disable Button */
+.threshold-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Success Message */
+.threshold-message {
+    margin-top: 10px;
+    color: #2e7d32; /* Green */
+    font-weight: bold;
+    font-size: 14px;
+    background: #e8f5e9;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #2e7d32;
+}

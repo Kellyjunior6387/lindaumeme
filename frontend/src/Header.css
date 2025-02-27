@@ -1,0 +1,51 @@
+/* Header.css */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font to the entire body */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #4CAF50; /* Sophisticated green background */
+    padding: 20px; /* Some padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-list {
+    list-style: none; /* Remove bullets */
+    display: flex; /* Display items in a row */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.nav-item {
+    margin-right: 20px; /* Space between items */
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.nav-item:last-child {
+    margin-right: 0; /* No margin for the last item */
+}
+
+.nav-icon {
+    margin-right: 8px; /* Space between icon and text */
+    color: white; /* Icon color */
+}
+
+.nav-item {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* White text color */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-item:hover {
+    color: #FFEB3B; /* Yellow color on hover */
+}
