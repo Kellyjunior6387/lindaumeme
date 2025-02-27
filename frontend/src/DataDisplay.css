@@ -1,42 +1,70 @@
-/* DataDisplay.css */
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between cards */
-    margin-top: 20px; /* Space between header and cards */
-    padding: 20px; /* Add padding around the card container */
+/* Container Styling */
+.data-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-    background-color: #f5f5f5; /* Light grey background */
-    padding: 20px; /* Add some padding */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
-    flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+/* Header Styling */
+.data-header {
+    text-align: center;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.card-item {
+/* Grid Layout (4 Cards per Row) */
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Equal Columns */
+    gap: 10px; /* Space between cards */
+}
+
+/* Card Styling */
+.data-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card-label {
-    font-weight: bold; /* Bold text for labels */
-    color: #333; /* Darker text color */
+/* Label Styling */
+.data-label {
+    font-weight: bold;
+    color: #555;
 }
 
-.card-value {
-    color: #555; /* Slightly lighter text color for values */
+/* Value Styling */
+.data-value {
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.card-input {
-    padding: 8px;
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 4px; /* Rounded corners */
-    width: 100%; /* Full width */
-    font-size: 14px; /* Font size */
-    color: #333; /* Text color */
+/* Conditional Color Coding */
+.high-consumption {
+    color: #d9534f; /* Red for high power usage */
+}
+
+.normal-consumption {
+    color: #5cb85c; /* Green for normal usage */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 800px) {
+    .data-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Cards per Row */
+    }
+}
+
+@media (max-width: 500px) {
+    .data-grid {
+        grid-template-columns: 1fr; /* Stack Cards */
+    }
 }
