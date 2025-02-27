@@ -1,27 +1,13 @@
 import React, { useState } from 'react';
-import '../DataDisplay.css'; // Import the CSS file
+import ThresholdInput from './ThresholdInput';
+import '../DataDisplay.css';
 
 const DataDisplay = ({ date, powerConsumption }) => {
     const [threshold, setThreshold] = useState('');
 
-    const handleInputChange = (event) => {
-        setThreshold(event.target.value);
-    };
-
     return (
         <div className="card-container">
-            <div className="card">
-                <div className="card-item">
-                    <label className="card-label">Threshold:</label>
-                    <input
-                        type="text"
-                        className="card-input"
-                        value={threshold}
-                        onChange={handleInputChange}
-                        placeholder="Enter threshold"
-                    />
-                </div>
-            </div>
+            
             <div className="card">
                 <div className="card-item">
                     <span className="card-label">Timestamp:</span>
