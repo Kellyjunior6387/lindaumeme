@@ -19,7 +19,8 @@ API_KEY = os.getenv("AT_API_KEY")
 USERNAME = os.getenv("AT_USERNAME")
 THRESHOLD = 800  # Overuse limit in Watts
 
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})  # Allow all origins
+
 africastalking.initialize(
     USERNAME,
     API_KEY
@@ -63,7 +64,7 @@ def log_consumption():
     db.session.add(new_entry)
     db.session.commit()
     if consumption > THRESHOLD:
-        send_alert(user.password, f" Overuse Alert! Your consumption is {consumption}W.")
+        send_alert(user.phone_number, f" Overuse Alert! Your consumption is {consumption - THRESHOLD}W above normal")
     
     return jsonify({"message": "Data logged successfully"}), 201
 # Africa's Talking SMS API
